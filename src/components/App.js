@@ -42,7 +42,7 @@ class App extends Component {
     this.props.fetchData(this.state.etCode);
   }
   campaignFormat(eventname){
-    return eventname.replace(' ', '');
+    return eventname.replace(/ /gi, '');
   }
 
   dateFormat(dt){
