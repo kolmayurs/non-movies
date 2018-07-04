@@ -42,8 +42,8 @@ class App extends Component {
     this.props.fetchData(this.state.etCode);
   }
   campaignFormat(eventname){
-    let a = eventname.toString().replace(/:| |-|_|:/gi, '')
-    return a;
+    let a = eventname.split(' ')
+    return a[0];
   }
 
   dateFormat(dt){
