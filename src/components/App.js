@@ -51,10 +51,10 @@ function dateFormat(dt){
 
 function genreFormat(genre){
    if (genre === null) {
-    return genre
+    return genre;
    }
    else{
-    return genre.replace(',', '  |  ');;
+    return genre.replace(',', '  |  ');
   }
     
   }
