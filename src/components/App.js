@@ -26,15 +26,16 @@ const mapDispatchToProps = (dispatch) => {
 }
 
  function campaignFormat(eventname){
-  if (eventname === null) {
-    return eventname;
-  }
-  else{
-    return eventname;
+  try {
+    return eventname.replace(/:| |-|_|:/gi, '');
+    }
+  catch(err){
+    alert(err.message);
   }
   }
 
 function dateFormat(dt){
+  try {
     let year = dt.substring(0,4);
     let month = dt.substring(4,6);
     let day = dt.substring(6,8);
@@ -48,15 +49,18 @@ function dateFormat(dt){
     let timeFormat = day+' '+months[month-1]+', '+days[weekday];
     return timeFormat;
   }
+  catch(err){
+    alert(err.message);
+  }
+  }
 
 function genreFormat(genre){
-   if (genre === null) {
-    return genre;
-   }
-   else{
-    return genre
+    try {
+    return genre.replace(',', '  |  ');
+     }
+  catch(err){
+    alert(err.message);
   }
-    
   }
 
 class App extends Component {
