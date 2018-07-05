@@ -26,11 +26,11 @@ const mapDispatchToProps = (dispatch) => {
 }
 
  function campaignFormat(eventname){
-  if (eventname !== null) {
-    return eventname.replace(/:| |-|_|:/gi, '');
+  if (eventname === null) {
+    return eventname;
   }
   else{
-    return eventname;
+    return eventname.replace(/:| |-|_|:/gi, '');
   }
   }
 
@@ -50,11 +50,11 @@ function dateFormat(dt){
   }
 
 function genreFormat(genre){
-   if (genre !== null) {
-    return genre.replace(',', '  |  ');
+   if (genre === null) {
+    return genre
    }
    else{
-    return genre;
+    return genre.replace(',', '  |  ');;
   }
     
   }
