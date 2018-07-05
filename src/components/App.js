@@ -54,7 +54,7 @@ function genreFormat(genre){
     return genre;
    }
    else{
-    return genre.replace(',', '  |  ');
+    return genre
   }
     
   }
