@@ -30,7 +30,7 @@ const mapDispatchToProps = (dispatch) => {
     return eventname;
   }
   else{
-    return eventname.replace(/:| |-|_|:/gi, '');
+    return eventname;
   }
   }
 
