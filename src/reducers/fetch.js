@@ -32,7 +32,7 @@ export default function fetch(state={
 				etlastdate: action.payload_etlastdate,}
 		}
 		case 'FETCH_DATA_ERROR' : {
-			return {...state, fetching: false, fetched: false, error: action.payload}
+			return {...state, fetching: false, fetched: false, error: action.error}
 		}
 		default:{
 			return {...state}

@@ -6,7 +6,7 @@ export function fetchData (et) {
 		axios.get('https://data-in.bookmyshow.com/?cc=&ch=mobile&cmd=GETALLDETAILSBYEVT&ec='+et+'&f=json&lg=&lt=&sr=MWEST&t=67x1xa33b4x422b361ba')
 		.then(res => {
 			dispatch({type:'FETCH_DATA_SUCCESS', 
-				payload: res.data.BookMyShow, 
+				payload: res, 
 				payload_eventinfo_etcode: res.data.BookMyShow.arrEventInfo.EventCode, 
 				payload_venues: res.data.BookMyShow.arrVenues,
 				payload_etcode: res.data.BookMyShow.arrEventInfo[0].EventCode,
@@ -19,7 +19,7 @@ export function fetchData (et) {
 				 })
 		})
 		.catch(err => {
-			dispatch({type:'FETCH_DATA_SUCCESS', payload: err})
+			dispatch({type:'FETCH_DATA_ERROR', error: err})
 		})
 	}
 }
