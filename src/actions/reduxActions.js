@@ -3,7 +3,7 @@ import axios from 'axios';
 export function fetchData (et) {
 	return function(dispatch){
 		dispatch({type:'FETCH_DATA_START'})
-		axios.get('http://data-in.bookmyshow.com/?cc=&ch=mobile&cmd=GETALLDETAILSBYEVT&ec='+et+'&f=json&lg=&lt=&sr=MWEST&t=67x1xa33b4x422b361ba')
+		axios.get('https://data-in.bookmyshow.com/?cc=&ch=mobile&cmd=GETALLDETAILSBYEVT&ec='+et+'&f=json&lg=&lt=&sr=MWEST&t=67x1xa33b4x422b361ba')
 		.then(res => {
 			dispatch({type:'FETCH_DATA_SUCCESS', 
 				payload: res.data.BookMyShow, 
