@@ -26,7 +26,12 @@ const mapDispatchToProps = (dispatch) => {
 }
 
  function campaignFormat(eventname){
+  if (eventname !== null) {
     return eventname.replace(/:| |-|_|:/gi, '');
+  }
+  else{
+    return eventname;
+  }
   }
 
 function dateFormat(dt){
@@ -45,7 +50,13 @@ function dateFormat(dt){
   }
 
 function genreFormat(genre){
+   if (genre !== null) {
     return genre.replace(',', '  |  ');
+   }
+   else{
+    return genre;
+  }
+    
   }
 
 class App extends Component {
