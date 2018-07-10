@@ -44,9 +44,11 @@ function dateFormat(fdt, ldt){
             let ldtday = ldt.substring(6,8);
             let months =  ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
             let days = ['Sun','Mon','Tue','Wed','Thu','Fri','Sat'];
-            console.log(fdtyear + ' ' + fdtmonth + ' ' +fdtday);
-            let fdate = '"'+ fdtyear + '-' + fdtmonth + '-' +fdtday +'"';
-            let newdate = new Date(fdate);
+            let fdate = Date.parse('"'+ fdtyear + '-' + fdtmonth + '-' +fdtday +'"');
+            let newdate = new Date();
+            newdate.setFullYear(Number(fdtyear));
+            newdate.setMonth(Number(fdtmonth) - 1);
+            newdate.setDate(fdtday);
             let weekday = newdate.getDay();
     if(fdt === ldt){
        let timeFormat = fdtday+' '+months[fdtmonth-1]+', '+days[weekday];
@@ -76,7 +78,8 @@ function genreFormat(genre){
 class App extends Component {
   constructor(props){
     super(props);
-    this.state = {etCode:'ET00019735',checked: false, 
+    this.state = {etCode:'ET00019735',checked: true, 
+    target_value: '',
     value: '<table class="deviceWidth" cellspacing="0" cellpadding="0" align="left" style="width:40%; min-width:250px; max-width:292px; margin:10px 25px; background-color:#ffffff; vertical-align:top;display:inline-block;float:none;"><tr><td style="width:100%;"><table cellpadding="0" cellspacing="0" border="0" align="center" style="background-color:#ffffff; margin:0 auto;"><tr><td valign="top" style="width:100%; background-color:#ffffff;"><a href="'+this.props.eturl+'?&utm_source=NMMumbaiEvent23October2017&utm_medium=email&utm_campaign='+campaignFormat(this.props.etname)+'" target="_blank" style="text-decoration:none; color:#fff;"><img src="https://in.bmscdn.com/events/eventlisting/'+this.props.etcode+'.jpg" alt="'+this.props.etname+'" title="'+this.props.etname+'" border="0" style="width:100%; display:block; background-color:#ffffff; color:#010101; overflow:hidden; border-radius:10px;"/></a></td></tr><tr><td style="width:100%;padding:10px 5px 0px 5px; font-size:16px; vertical-align:top; font-family:Verdana, Arial,sans-serif; text-align:left; color:#333333; line-height:22px;"><a href="'+this.props.eturl+'?&utm_source=NMMumbaiEvent23October2017&utm_medium=email&utm_campaign='+campaignFormat(this.props.etname)+'" target="_blank" style="text-decoration:none; color:#333333; font-family:Verdana, Arial,sans-serif;">'+this.props.etname+'</a></td></tr><tr><td style="width:100%;padding:5px 5px; font-size:12px; vertical-align:top; font-family:Verdana, Arial,sans-serif; text-align:left; color:#666666; line-height:18px;">'+this.props.etvenues+'</td></tr><tr><td style="width:100%;padding:5px 5px 5px 5px; font-size:12px; vertical-align:top; font-family:Verdana, Arial,sans-serif; text-align:left; line-height:19px; font-weight:normal; color:#a3a3a3;">'+genreFormat(this.props.etgenre)+'</td></tr><tr><td align="center" style="width:100%; padding:5px 0px 0px 0px; background-color:#ffffff;"><table cellspacing="0" cellpadding="0" align="left" style="float:left;"><tr><td style="padding:15px 5px 0px 5px; font-size:13px; font-weight:bold; font-family:Verdana, Arial,sans-serif; text-align:left; color:#666666; text-transform:capitalize; line-height:16px;">'+dateFormat(this.props.etfirstdate, this.props.etlastdate)+'</td></tr></table><table cellspacing="0" cellpadding="0" align="right" style="float:right;"><tr><td style="padding:5px; text-align:right;"><a href="'+this.props.eturl+'?&utm_source=NMMumbaiEvent23October2017&utm_medium=email&utm_campaign='+campaignFormat(this.props.etname)+'" target="_blank" style="text-decoration:none; color:#ffffff;"><span style="padding:10px 25px 9px 25px; line-height:40px; font-family:Verdana, Arial,sans-serif; font-size:12px; white-space:nowrap; color:#ffffff; background-color:#0072ff; font-weight:bold; border-radius:5px;">BOOK</span></a></td></tr></table></td></tr></table></td></tr></table>',
   }
     this.onEventChange = this.onEventChange.bind(this);
@@ -84,6 +87,7 @@ class App extends Component {
   }
   componentWillMount(){
     this.props.fetchData(this.state.etCode);
+    this.checkChanged();
 }
 
   onEventChange(){
@@ -105,7 +109,6 @@ class App extends Component {
     if(this.props.error){
     alert("Please install cors plugin in you browser.")
   }
-  console.log(this.state.value +' || '+ this.state.checked);
     return (
 
       <div className="App">
@@ -127,7 +130,7 @@ class App extends Component {
         etutmcampaign={campaignFormat(this.props.etname)} />
         <br />
         <br />
-        <textarea value={this.state.value}></textarea>
+        <textarea value={this.state.value} onChange={ev =>{this.setState({target_value: ev.target.value})}}></textarea>
       </div>
     );
   }
