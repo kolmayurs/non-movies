@@ -2,3 +2,30 @@
   text-align: center;
 }
 
+textarea{
+  margin: 1em auto;
+      min-width: 95%;
+      min-height: 300px;
+      display:block;
+      background-color:#fce1ce;
+      border-left: 5px solid #f69855;
+      padding:20px;
+      line-height:24px;
+      word-break: break-all;
+      white-space: -moz-pre-wrap; /* Mozilla */
+      white-space: -o-pre-wrap; /* Opera 7 */
+      white-space: pre-wrap;  /* CSS 2.1 */
+      /*white-space: pre-line;  CSS 3 */
+      word-wrap: break-word; /* IE */
+}
+
+#btn{
+      background-color:#d6181f; /* when in focus */
+      width:20%;
+      color:#ffffff;
+      font-size:15px; /* This probably makes it "fat" as you want */
+      border-radius: 10px;
+      margin:20px 10px auto;
+      outline:0 none;
+      padding:5px;
+      }

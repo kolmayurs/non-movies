@@ -75,6 +75,47 @@ function genreFormat(genre){
   }
   }
 
+(function() {
+      
+       'use strict';
+      
+      // click events
+      document.body.addEventListener('click', copy, true);
+      
+       // event handler
+       function copy(e) {
+      
+       // find target element
+       var 
+         t = e.target,
+         c = t.dataset.copytarget,
+         inp = (c ? document.querySelector(c) : null);
+         
+       // is element selectable?
+       if (inp && inp.select) {
+         
+         // select text
+         inp.select();
+      
+         try {
+           // copy text
+           document.execCommand('copy');
+           inp.blur();
+           
+           // copied animation
+           t.classList.add('copied');
+           setTimeout(function() { t.classList.remove('copied'); }, 1500);
+         }
+         catch (err) {
+           alert('please press Ctrl/Cmd+C to copy');
+         }
+         
+       }
+       
+       }
+      
+      })();
+
 class App extends Component {
   constructor(props){
     super(props);
@@ -112,7 +153,7 @@ class App extends Component {
     return (
 
       <div className="App">
-        <br /><br />
+        <br />
         <input type="text" onChange={e => {this.setState({etCode: e.target.value})}}/>
         <button onClick={this.onEventChange.bind(this)}>Submit</button>
         <br />
@@ -130,8 +171,9 @@ class App extends Component {
         etutmcampaign={campaignFormat(this.props.etname)}
         etsmallcard={this.state.checked} />
         <br />
+        <button id="btn" data-copytarget="#holdtext">Copy to Clipboard</button> 
         <br />
-        <textarea value={this.state.value} onChange={ev =>{this.setState({target_value: ev.target.value})}}></textarea>
+        <textarea id="holdtext" value={this.state.value} onChange={ev =>{this.setState({target_value: ev.target.value})}}></textarea>
       </div>
     );
   }
