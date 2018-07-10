@@ -154,12 +154,13 @@ class App extends Component {
 
       <div className="App">
         <br />
-        Enter ET Code Here: <input type="text" onChange={e => {this.setState({etCode: e.target.value})}}/>
-        <button onClick={this.onEventChange.bind(this)}>Submit</button>
+        <input className="submittext" type="text" placeholder="Enter ET Code Here" onChange={e => {this.setState({etCode: e.target.value})}}/>
+        <button className="submitbutton" onClick={this.onEventChange.bind(this)}>Submit</button>
         <br />
         <br />
         Change Banner: <input type="checkbox" onClick={this.checkChanged.bind(this)} />
-        <h1>{this.state.etCode}</h1>
+        <br />
+        <br />
         <EventCard  
         etcode= {this.props.etcode} 
         etname={this.props.etname} 
