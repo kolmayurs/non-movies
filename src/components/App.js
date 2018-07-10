@@ -117,7 +117,7 @@ class App extends Component {
         <button onClick={this.onEventChange.bind(this)}>Submit</button>
         <br />
         <br />
-        Main Banner: <input type="checkbox" onClick={this.checkChanged.bind(this)} />
+        Change Banner: <input type="checkbox" onClick={this.checkChanged.bind(this)} />
         <h1>{this.state.etCode}</h1>
         <EventCard  
         etcode= {this.props.etcode} 
