@@ -154,7 +154,7 @@ class App extends Component {
 
       <div className="App">
         <br />
-        <input type="text" onChange={e => {this.setState({etCode: e.target.value})}}/>
+        Enter ET Code Here: <input type="text" onChange={e => {this.setState({etCode: e.target.value})}}/>
         <button onClick={this.onEventChange.bind(this)}>Submit</button>
         <br />
         <br />
@@ -170,7 +170,7 @@ class App extends Component {
         etlastdate= {this.props.etlastdate} 
         etutmcampaign={campaignFormat(this.props.etname)}
         etsmallcard={this.state.checked} />
-        <br />
+        <hr />
         <button id="btn" data-copytarget="#holdtext">Copy to Clipboard</button> 
         <br />
         <textarea id="holdtext" value={this.state.value} onChange={ev =>{this.setState({target_value: ev.target.value})}}></textarea>
