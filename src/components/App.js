@@ -106,7 +106,6 @@ checkChanged(){
  
    }
     return(
-
       <div className="App">
         <br />
         <input className="submittext" type="text" placeholder="Enter ET Code Here" onChange={e => {this.setState({etCode: e.target.value})}}/>
