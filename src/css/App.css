@@ -7,8 +7,12 @@ textarea{
       min-width: 95%;
       min-height: 300px;
       display:block;
-      background-color:#fce1ce;
-      border-left: 5px solid #f69855;
+      background-color:#ffffff;
+      border-left: 5px solid #0072ff;
+      border-top: 1px solid #0072ff;
+      border-right: 1px solid #0072ff;
+      border-bottom: 1px solid #0072ff;
+      color: #0072ff;
       padding:20px;
       line-height:24px;
       word-break: break-all;
@@ -19,15 +23,24 @@ textarea{
       word-wrap: break-word; /* IE */
 }
 
+hr{
+  height:1px; 
+  border:none; 
+  color:#0072ff;
+  background-color:#0072ff;
+}
 #btn{
-      background-color:#d6181f; /* when in focus */
-      width:20%;
+      background-color:#0072ff;  /* when in focus */
       color:#ffffff;
-      font-size:15px; /* This probably makes it "fat" as you want */
-      border-radius: 10px;
-      margin:20px 10px auto;
-      outline:0 none;
-      padding:5px;
+      font-family:Verdana, Arial,sans-serif; 
+  font-size:12px;
+      border-radius:5px;
+      outline: 0px;
+      border: 0px;
+      margin:10px 10px auto;
+      padding:10px 25px;
+      font-weight: bold;
+      cursor: pointer;
       }
 
 .submitbutton{
@@ -49,6 +62,30 @@ textarea{
 .submittext{
   padding:7px; 
   border-radius:5px;
+  font-family:Verdana, Arial,sans-serif; 
+  font-size:12px;
   outline: 0px;
-  border: 1px solid #999;
+  border: 1px solid #0072ff;
+  color: #0072ff;
+  font-weight: bold;
 }
+
+.text_color{
+  color: #0072ff;
+  font-weight: bold;
+  text-decoration: underline;
+  font-style: italic;
+}
+::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+  color: #0072ff;
+}
+::-moz-placeholder { /* Firefox 19+ */
+  color: #0072ff;
+}
+:-ms-input-placeholder { /* IE 10+ */
+  color: #0072ff;
+}
+:-moz-placeholder { /* Firefox 18- */
+  color: #0072ff;
+}
+
