@@ -1,6 +1,6 @@
  export function campaignFormat(eventname){
   try {
-    return eventname.replace(/:| |-|_|:/gi, '');
+    return eventname.replace(/:| |-|_|:|!/gi, '');
     }
   catch(err){
     alert(err.message);
