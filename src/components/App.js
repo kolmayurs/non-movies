@@ -5,6 +5,7 @@ import {bindActionCreators} from 'redux';
 import {fetchData} from '../actions/reduxActions';
 import EventCard from './EventCard';
 import TextArea from './TextArea';
+import Loader from './Loader';
 import {campaignFormat, dateFormat, genreFormat} from './Functions';
 
 const mapStateToProps = (state) => {
@@ -55,7 +56,7 @@ checkChanged(){
 
   render() {
     if(this.props.loading){
-      return <h1>Loading</h1>
+      return <Loader />
     }
     if(this.props.error){
     alert("Please install cors plugin in you browser.")
@@ -64,6 +65,7 @@ checkChanged(){
     return (
 
       <div className="App">
+        <br />
         <br />
         <input className="submittext" type="text" placeholder="Enter ET Code Here" onChange={e => {this.setState({etCode: e.target.value})}}/>
         <button className="submitbutton" onClick={this.onEventChange.bind(this)}>Submit</button>

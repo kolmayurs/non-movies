@@ -89,3 +89,37 @@ hr{
   color: #0072ff;
 }
 
+.loader {
+  position: relative;
+  z-index: 1;
+  margin: 0px auto;
+  margin-top:20%;
+  border: 8px solid #f3f3f3;
+  border-radius: 50%;
+  border-top: 8px solid #0072ff;
+  color: #0072ff;
+  width: 80px;
+  height: 80px;
+  -webkit-animation: spin 2s linear infinite;
+  animation: spin 2s linear infinite;
+}
+
+@-webkit-keyframes spin {
+  0% { -webkit-transform: rotate(0deg); }
+  100% { -webkit-transform: rotate(360deg); }
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+.loading_test{
+  text-align: center;
+  display: block;
+  padding: 15px 0px;
+  color: #0072ff;
+  font-family:Verdana, Arial,sans-serif; 
+  font-size:15px; 
+  font-weight: bold;
+}
