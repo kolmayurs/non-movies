@@ -49,7 +49,13 @@ checkChanged(){
     }
   }
   onEventChange(){
-    this.props.fetchData(this.state.etCode);
+    if(this.state.etCode !== '' && this.state.etCode.substring(0,2)==='ET'){
+      this.props.fetchData(this.state.etCode);
+       this.setState({etCode:''});
+    }
+    else{
+      alert('Please Enter Valid ET Code in Text Field');
+    }
   }
 
 
@@ -59,7 +65,7 @@ checkChanged(){
       return <Loader />
     }
     if(this.props.error){
-    alert("Please install cors plugin in you browser.")
+    alert("Please install cors plugin in you browser & try again with Valid ET Code.");
   }
    if(this.props.etcode !== ''){
     return (
