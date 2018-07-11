@@ -46,3 +46,13 @@ export function genreFormat(genre){
     alert(err.message);
   }
   }
+
+export function eventVenueFormat(eventVenue){
+    try {
+      let spliteventVenue = eventVenue.split(':');
+    return spliteventVenue[0];
+     }
+  catch(err){
+    alert(err.message);
+  }
+  }

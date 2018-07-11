@@ -6,7 +6,7 @@ import {fetchData} from '../actions/reduxActions';
 import EventCard from './EventCard';
 import TextArea from './TextArea';
 import Loader from './Loader';
-import {campaignFormat, dateFormat, genreFormat} from './Functions';
+import {campaignFormat, dateFormat, genreFormat, eventVenueFormat} from './Functions';
 
 const mapStateToProps = (state) => {
   return{
@@ -85,7 +85,7 @@ checkChanged(){
         etname={this.props.etname} 
         eturl= {this.props.eturl} 
         etgenre= {genreFormat(this.props.etgenre)} 
-        etvenues= {this.props.etvenues} 
+        etvenues= {eventVenueFormat(this.props.etvenues)} 
         etfirstdate= {dateFormat(this.props.etfirstdate,this.props.etlastdate)} 
         etlastdate= {this.props.etlastdate} 
         etutmcampaign={campaignFormat(this.props.etname)}
@@ -96,7 +96,7 @@ checkChanged(){
         etname={this.props.etname} 
         eturl= {this.props.eturl} 
         etgenre= {genreFormat(this.props.etgenre)} 
-        etvenues= {this.props.etvenues} 
+        etvenues= {eventVenueFormat(this.props.etvenues)} 
         etfirstdate= {dateFormat(this.props.etfirstdate,this.props.etlastdate)} 
         etlastdate= {this.props.etlastdate} 
         etutmcampaign={campaignFormat(this.props.etname)}
