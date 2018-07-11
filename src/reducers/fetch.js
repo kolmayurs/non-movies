@@ -29,7 +29,8 @@ export default function fetch(state={
 				etgenre: action.payload_etgenre,
 				etvenues: action.payload_etvenues,
 				etfirstdate: action.payload_etfirstdate,
-				etlastdate: action.payload_etlastdate,}
+				etlastdate: action.payload_etlastdate,
+				error:null}
 		}
 		case 'FETCH_DATA_ERROR' : {
 			return {...state, fetching: false, fetched: false, error: action.error}

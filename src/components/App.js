@@ -65,7 +65,7 @@ checkChanged(){
       return <Loader />
     }
     if(this.props.error){
-    alert("Please install cors plugin in you browser & try again with Valid ET Code.");
+    alert("Please install cors plugin in you browser & try again with Valid Event ET Code.");
   }
    if(this.props.etcode !== ''){
     return (
@@ -77,7 +77,7 @@ checkChanged(){
         <button className="submitbutton" onClick={this.onEventChange.bind(this)}>Submit</button>
         <br />
         <br />
-        <span className="text_color">Change Banner:</span> <input type="checkbox" onClick={this.checkChanged.bind(this)} />
+        <span className="text_color">Change Card:</span> <input type="checkbox" onClick={this.checkChanged.bind(this)} />
         <br />
         <br />
         <EventCard  
