@@ -11,11 +11,13 @@ export function dateFormat(fdt, ldt){
             let fdtyear = fdt.substring(0,4);
             let fdtmonth = fdt.substring(4,6);
             let fdtday = fdt.substring(6,8);
+            // eslint-disable-next-line
             let ldtyear = ldt.substring(0,4);
             let ldtmonth = ldt.substring(4,6);
             let ldtday = ldt.substring(6,8);
             let months =  ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
             let days = ['Sun','Mon','Tue','Wed','Thu','Fri','Sat'];
+            // eslint-disable-next-line
             let fdate = Date.parse('"'+ fdtyear + '-' + fdtmonth + '-' +fdtday +'"');
             let newdate = new Date();
             newdate.setFullYear(Number(fdtyear));
