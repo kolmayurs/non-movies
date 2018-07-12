@@ -47,6 +47,21 @@ export function genreFormat(genre){
   }
   }
 
+export function genreMeteFormat(genre, genre0, genre1, genre2){
+  console.log(genre2)
+      if(genre0 !== undefined && genre1 !== undefined && genre2 !== undefined){
+        return genre0 + '  |  ' +genre1+ '  |  ' +genre2;
+      }
+      else if(genre0 !== undefined && genre1 !== undefined && genre2 === undefined){
+        return genre0 + '  |  ' +genre1; 
+      }
+      else if(genre0 !== undefined && genre1 === undefined && genre2 === undefined){
+        return genre0; 
+      }
+      else{
+        return genre.replace(',', '  |  ');
+      }
+  }
 export function eventVenueFormat(eventVenue){
     try {
       let spliteventVenue = eventVenue.split(':');

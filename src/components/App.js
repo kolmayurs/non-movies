@@ -6,7 +6,7 @@ import {fetchData} from '../actions/reduxActions';
 import EventCard from './EventCard';
 import TextArea from './TextArea';
 import Loader from './Loader';
-import {campaignFormat, dateFormat, genreFormat, eventVenueFormat} from './Functions';
+import {campaignFormat, dateFormat, genreMeteFormat, eventVenueFormat} from './Functions';
 
 const mapStateToProps = (state) => {
   return{
@@ -16,6 +16,9 @@ const mapStateToProps = (state) => {
     etname:state.fetch.etname,
     eturl: state.fetch.eturl,
     etgenre: state.fetch.etgenre,
+    etgenre0: state.fetch.etgenre0,
+    etgenre1: state.fetch.etgenre1,
+    etgenre2: state.fetch.etgenre2,
     etvenues: state.fetch.etvenues,
     etfirstdate: state.fetch.etfirstdate,
     etlastdate: state.fetch.etlastdate,
@@ -84,7 +87,7 @@ checkChanged(){
         etcode= {this.props.etcode} 
         etname={this.props.etname} 
         eturl= {this.props.eturl} 
-        etgenre= {genreFormat(this.props.etgenre)} 
+        etgenre= {genreMeteFormat(this.props.etgenre, this.props.etgenre0, this.props.etgenre1, this.props.etgenre2)} 
         etvenues= {eventVenueFormat(this.props.etvenues)} 
         etfirstdate= {dateFormat(this.props.etfirstdate,this.props.etlastdate)} 
         etlastdate= {this.props.etlastdate} 
@@ -95,7 +98,7 @@ checkChanged(){
         etcode= {this.props.etcode} 
         etname={this.props.etname} 
         eturl= {this.props.eturl} 
-        etgenre= {genreFormat(this.props.etgenre)} 
+        etgenre= {genreMeteFormat(this.props.etgenre, this.props.etgenre0, this.props.etgenre1, this.props.etgenre2)} 
         etvenues= {eventVenueFormat(this.props.etvenues)} 
         etfirstdate= {dateFormat(this.props.etfirstdate,this.props.etlastdate)} 
         etlastdate= {this.props.etlastdate} 
