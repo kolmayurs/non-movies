@@ -1,5 +1,201 @@
-body {
-  margin: 0;
-  padding: 0;
-  font-family: sans-serif;
-}
+html {
+			-webkit-text-size-adjust: none !important;
+			-ms-text-size-adjust: none !important;
+			}
+			* {
+			line-height: 100%;
+			-webkit-text-size-adjust: 100%;
+			-ms-text-size-adjust: 100%;
+			}
+			body {
+			width: 100%;
+			background-color: #ffffff;
+			margin: 0;
+			padding: 0;
+			-webkit-font-smoothing: antialiased;
+			font-family: Verdana, Arial,sans-serif
+			}
+			@media only screen and (max-width: 599px) {
+			*[class].deviceWidth {
+			width: 300px!important;
+			padding: 0;
+			}
+			*[class].noborder {
+			width: 300px!important;
+			padding: 0;
+			border:0px !important;
+			}
+			
+			*[class].deviceWidth2 {
+			width: 360px!important;
+			padding: 0;
+			}
+			*[class].deviceWidth1 {
+			width: 300px!important;
+			padding: 0;
+			border-top: 1px solid #bebebe;
+			}
+			*[class].deviceWidth_inline {
+			width: 300px!important;
+			display: inline!important;
+			padding: 0;
+			}
+			*[class].center {
+			text-align: center!important;
+			}
+			*[class].body_copy {
+			width: 100%;
+			}
+			td.main_nav td {
+			display: none;
+			padding: 0 !important;
+			}
+			td.main_nav a {
+			display: none;
+			padding: 10px 0;
+			border-bottom: 1px solid #bebebe;
+			}
+			*[class].col {
+			display: block;
+			margin: 0 0 20px 0;
+			}
+			*[class].col1 {
+			display: inline;
+			margin: 0 20px 0 0;
+			}
+			*[class].col2 {
+			display: inline;
+			}
+			*[class].marbtm {
+			margin: 0 5px 0 0;
+			}
+			*[class].header {
+			width: 100%;
+			margin: 0 20px 20px 0;
+			}
+			*[class].nomob {
+			display: none;
+			}
+			*[class].spacer {
+			display: none;
+			}
+			*[class].foot1 {
+			width: 300px!important;
+			padding: 5px 10px;
+			border-bottom: 1px solid #bebebe;
+			border-right: 0 !important;
+			border-left: 0 !important;
+			}
+			*[class].foot2 {
+			width: 300px!important;
+			padding: 5px 10px;
+			border-right: 0 !important;
+			border-left: 0 !important;
+			}
+			*[class].mobileShow {
+			display: table !important;
+			}
+			*[class].mobileHide {
+			display: none !important;
+			}
+			}
+			@media only screen and (min-width: 320px) and (max-width: 599px) {
+			*[class].deviceWidth {
+			width: 300px!important;
+			padding: 0;
+			}
+			*[class].noborder {
+			width: 300px!important;
+			padding: 0;
+			border:0px !important;
+			}
+			*[class].deviceWidth2 {
+			width: 360px!important;
+			padding: 0;
+			}
+			*[class].deviceWidth1 {
+			width: 300px!important;
+			padding: 0;
+			border-top: 1px solid #bebebe;
+			}
+			*[class].deviceWidth_inline {
+			width: 300px!important;
+			display: inline!important;
+			padding: 0;
+			}
+			*[class].center {
+			text-align: center!important;
+			}
+			*[class].body_copy {
+			width: 100%;
+			}
+			td.main_nav td {
+			display: none;
+			padding: 0 !important;
+			}
+			td.main_nav a {
+			display: none;
+			padding: 10px 0;
+			border-bottom: 1px solid #bebebe;
+			}
+			*[class].col {
+			display: block;
+			margin: 0 0 20px 0;
+			}
+			*[class].col1 {
+			display: inline;
+			margin: 0 20px 0 0;
+			}
+			*[class].col2 {
+			display: inline;
+			}
+			*[class].marbtm {
+			margin: 0 5px 0 0;
+			}
+			*[class].header {
+			width: 100%;
+			margin: 0 20px 20px 0;
+			}
+			*[class].nomob {
+			display: none;
+			}
+			*[class].spacer {
+			display: none;
+			}
+			*[class].foot1 {
+			width: 300px!important;
+			padding: 5px 10px;
+			border-bottom: 1px solid #bebebe;
+			border-right: 0px!important;
+			}
+			*[class].foot2 {
+			width: 300px!important;
+			padding: 5px 10px;
+			border-right: 0px!important;
+			}
+			*[class].mobileShow {
+			display: table !important;
+			}
+			}
+			@media only screen and (max-width: 400px) {
+			td[class="pattern"] .spacer {
+			display: none;
+			}
+			td[class="pattern"] .col {
+			width: 100%;
+			display: block;
+			margin-bottom: 20px;
+			}
+			td[class="pattern"] .col1 {
+			width: 100%;
+			display: inline;
+			margin: 0 20px 20px 0;
+			}
+			td[class="pattern"] .col2 {
+			width: 100%;
+			display: inline;
+			}
+			td[class="pattern"] .body_copy {
+			width: 100%;
+			}
+			}
