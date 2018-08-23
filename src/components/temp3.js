@@ -10,7 +10,7 @@
 				</tr>
 				<tr>
 					<td valign="middle" style={{width:100%, padding:10px 0px 0px 0px, font-size:20px, fontWeight:bold, verticalAlign:top, fontFamily:Verdana, Arial,sans-serif, textAlign:left, color:#333333, lineHeight:26px,}}><span style={{display:block, padding:5px 0px 15px 0px, font-size:15px, fontWeight:bold, fontFamily:Verdana, Arial,sans-serif, textAlign:left, color:#666666, lineHeight:16px,}}>'+dateFormat(this.props.etfirstdate, this.props.etlastdate)+'</span></td>
-					<td valign="top" style={{min-width:108px,padding:0px 0px 10px 0px, textAlign:left}}><a href={this.props.eturl+'?&utm_source=NMMumbaiEvent23October2017&utm_medium=email&utm_campaign='+this.props.etutmcampaign+''} style={{text-decoration:none, color:#ffffff,}}><span style={{padding:12px 30px 12px 30px, lineHeight:40px, fontFamily:Verdana, Arial,sans-serif, font-size:15px, white-space:nowrap, color:#ffffff, backgroundColor:#0072ff, fontWeight:bold, border-radius:4px,}}>BOOK</span></a></td>
+					<td valign="top" style={{min-width:108px,padding:0px 0px 10px 0px, textAlign:left}}><a href={this.props.eturl+'?&utm_source=NMMumbaiEvent23October2017&utm_medium=email&utm_campaign='+this.props.etutmcampaign+''} style={{text-decoration:none, color:#ffffff,}}><span style={{padding:12px 30px 12px 30px, lineHeight:40px, fontFamily:Verdana, Arial,sans-serif, font-size:15px, white-space:nowrap, color:#ffffff, backgroundColor:#e7374d, fontWeight:bold, border-radius:4px,}}>BOOK</span></a></td>
 				</tr>
 			</table>
 		</td>
