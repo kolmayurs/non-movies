@@ -38,9 +38,20 @@ class App extends Component {
     this.state = {etCode:'',checked: false, 
     target_value: '',
     value: '',
+    Date: ''
   }
     this.onEventChange = this.onEventChange.bind(this);
      this.checkChanged=this.checkChanged.bind(this);
+  }
+
+  componentDidMount(){
+const monthNames = ["January", "February", "March", "April", "May", "June",
+  "July", "August", "September", "October", "November", "December"
+];
+
+const d = new Date();
+let newDate = d.getDate()+monthNames[d.getMonth()]+d.getFullYear();
+this.setState({Date: newDate});
   }
 
 checkChanged(){
@@ -92,7 +103,8 @@ checkChanged(){
         etfirstdate= {dateFormat(this.props.etfirstdate,this.props.etlastdate)} 
         etlastdate= {this.props.etlastdate} 
         etutmcampaign={campaignFormat(this.props.etname)}
-        etsmallcard={this.state.checked} />
+        etsmallcard={this.state.checked}
+        etDate = {this.state.Date} />
         <hr />
         <TextArea
         etcode= {this.props.etcode} 
@@ -103,7 +115,8 @@ checkChanged(){
         etfirstdate= {dateFormat(this.props.etfirstdate,this.props.etlastdate)} 
         etlastdate= {this.props.etlastdate} 
         etutmcampaign={campaignFormat(this.props.etname)}
-        etsmallcard={this.state.checked} />
+        etsmallcard={this.state.checked} 
+        etDate = {this.state.Date} />
       </div>
     );
  
